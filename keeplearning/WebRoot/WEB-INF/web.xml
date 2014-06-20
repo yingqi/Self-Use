@@ -5,7 +5,33 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
   <display-name></display-name>	
+
+  <servlet>
+	<servlet-name>ServletDemo01</servlet-name>
+	<servlet-class>com.javaweb.ServletDemo01</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+	<servlet-name>ServletDemo01</servlet-name>
+	<url-pattern>/ServletDemo01</url-pattern>  
+  </servlet-mapping>
+  
+   <servlet>
+	<servlet-name>FileRead</servlet-name>
+	<servlet-class>com.javaweb.FileRead</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+	<servlet-name>FileRead</servlet-name>
+	<url-pattern>/FileRead</url-pattern>  
+  </servlet-mapping>
+  
+  <listener>
+  	<listener-class>com.javaweb.MyServletContextListener</listener-class>
+  </listener>
+  
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
 </web-app>
+
