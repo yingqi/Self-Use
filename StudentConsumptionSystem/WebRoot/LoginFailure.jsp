@@ -1,10 +1,16 @@
 <%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>My JSP 'AdAdd.jsp' starting page</title>
-
+    <base href="<%=basePath%>">
+    
+    <title>My JSP 'DBALoginFailure.jsp' starting page</title>
+    
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -17,12 +23,7 @@
   </head>
   
   <body>
-    <%
-    	UserDAO userDAO = DAOFactory.getUserDAOInstance();
-    	User user = new User();
-    	user.setUsername("dao");
-    	user.setPassword("123");
-    	userDAO.insert(user);
-     %>
+    <h1>Login Failure</h1>
+    You can click <a href="Login.jsp">here</a> to log in.
   </body>
 </html>

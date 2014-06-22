@@ -26,9 +26,7 @@
 	<url-pattern>/FileRead</url-pattern>  
   </servlet-mapping>
   
-  <listener>
-  	<listener-class>com.javaweb.MyServletContextListener</listener-class>
-  </listener>
+ 
   
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
