@@ -23,22 +23,21 @@ public class UserDAOImpl implements UserDAO {
 	}
 	
 
-	@Override
+
 	public void insert(User user) throws Exception {
 		DBUpdate("insert into user(username, password) values("+"\""+user.getUsername()+"\""+","+"\""+user.getPassword()+"\""+")");
 	}
 
-	@Override
 	public void update(User user) throws Exception {
 		DBUpdate("update user set username="+"\""+user.getUsername()+"\""+" , password="+"\""+user.getPassword()+"\""+" where userid="+user.getUserId());
 	}
 
-	@Override
+
 	public void delete(User user) throws Exception {
 		DBUpdate("delete from user where userid="+user.getUserId());
 	}
 
-	@Override
+
 	public User queryById(int userId) throws Exception {
 		User user = null;
 		String sql="select * from user where userid=?";
@@ -66,7 +65,7 @@ public class UserDAOImpl implements UserDAO {
 		return user;
 	}
 
-	@Override
+
 	public List queryAll() throws Exception {
 		List<User> allUsers = new ArrayList<User>();
 		String sql="select * from user";
